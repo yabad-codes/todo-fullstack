@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 252, 255);
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.app {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1.3px solid black;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* List header */
+
+.list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.list-header h1 {
+    padding-left: 25px;
+}

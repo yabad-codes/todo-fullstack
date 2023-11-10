@@ -1,10 +1,10 @@
 import { useState } from "react";
-const Modal = ({ mode, setShowModal }) => {
+const Modal = ({ mode, setShowModal, task }) => {
   const editMode = mode === "edit" ? true : false;
   const [data, setData] = useState({
-    user_email: "",
-    title: "",
-    progress: "",
+    user_email: editMode ? task.user_email : "",
+    title: editMode ? task.title : "",
+    progress: editMode ? task.progress : 50,
     data: editMode ? "" : new Date(),
   });
 

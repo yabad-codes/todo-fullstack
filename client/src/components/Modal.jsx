@@ -61,6 +61,8 @@ const Modal = ({ mode, setShowModal, task, getData }) => {
 
         <form>
           <input
+            type="text"
+            autoComplete="off"
             required
             maxLength={30}
             placeholder="Your task goes here"

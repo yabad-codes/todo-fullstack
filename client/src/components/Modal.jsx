@@ -1,4 +1,5 @@
 import { useState } from "react";
+const serverUrl = import.meta.env.VITE_REACT_APP_SERVERURL;
 const Modal = ({ mode, setShowModal, task, getData }) => {
   const editMode = mode === "edit" ? true : false;
   const [data, setData] = useState({
@@ -11,7 +12,7 @@ const Modal = ({ mode, setShowModal, task, getData }) => {
   const postData = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/todos`, {
+      const response = await fetch(`${serverUrl}/todos`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -28,7 +29,7 @@ const Modal = ({ mode, setShowModal, task, getData }) => {
   const editData = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/todos/${task.id}`, {
+      const response = await fetch(`${serverUrl}/todos/${task.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

@@ -1,13 +1,14 @@
 import ListHeader from "./components/ListHeader";
 import ListItem from "./components/ListItem";
 import { useEffect, useState } from "react";
+const serverUrl = import.meta.env.VITE_REACT_APP_SERVERURL;
 
 const App = () => {
   const userEmail = "yabad@test.42.fr";
   const [tasks, setTasks] = useState(null);
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/todos/${userEmail}`);
+      const response = await fetch(`${serverUrl}/todos/${userEmail}`);
       const json = await response.json();
       setTasks(json);
     } catch (err) {

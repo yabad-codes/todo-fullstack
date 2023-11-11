@@ -16,18 +16,17 @@ const App = () => {
   };
 
   useEffect(() => getData, []);
-  console.log(tasks);
-  // Sort by date
 
+  // Sort by date
   const sortedTasks = tasks?.sort(
     (a, b) => new Date(a.date) - new Date(b.date)
   );
 
   return (
     <div className="app">
-      <ListHeader listName={"Get shit done!"} />
+      <ListHeader listName={"Get shit done!"} getData={getData} />
       {sortedTasks?.map((task) => (
-        <ListItem key={task.id} task={task} />
+        <ListItem key={task.id} task={task} getData={getData} />
       ))}
     </div>
   );

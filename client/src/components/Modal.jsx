@@ -1,12 +1,29 @@
 import { useState } from "react";
-const Modal = ({ mode, setShowModal, task }) => {
+const Modal = ({ mode, setShowModal, task, getData }) => {
   const editMode = mode === "edit" ? true : false;
   const [data, setData] = useState({
-    user_email: editMode ? task.user_email : "",
+    user_email: editMode ? task.user_email : "yabad@test.42.fr",
     title: editMode ? task.title : "",
     progress: editMode ? task.progress : 50,
-    data: editMode ? "" : new Date(),
+    date: editMode ? "" : new Date(),
   });
+
+  const postData = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`http://localhost:3000/todos`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (response.status === 200) {
+        setShowModal(false);
+        getData();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +34,8 @@ const Modal = ({ mode, setShowModal, task }) => {
   };
 
   return (
-    <div className="overlay">
-      <div className="modal">
+    <div className="overlay" onClick={() => setShowModal(false)}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="form-title-container">
           <h3>Let's {mode} your task</h3>
           <button onClick={() => setShowModal(false)}>X</button>
@@ -45,7 +62,11 @@ const Modal = ({ mode, setShowModal, task }) => {
             value={data.progress}
             onChange={handleChange}
           />
-          <input className={mode} type="submit" />
+          <input
+            className={mode}
+            type="submit"
+            onClick={editMode ? "" : postData}
+          />
         </form>
       </div>
     </div>

@@ -4,6 +4,21 @@ import TickIcon from "./TickIcon";
 import Modal from "./Modal";
 const ListItem = ({ task, getData }) => {
   const [showModal, setShowModal] = useState(false);
+
+  const deleteData = async () => {
+    const serverUrl = import.meta.env.VITE_REACT_APP_SERVERURL;
+    try {
+      const response = await fetch(`${serverUrl}/todos/${task.id}`, {
+        method: "DELETE",
+      });
+      if (response.status === 200) {
+        getData();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <li className="list-item">
       <div className="info-container">
@@ -16,7 +31,9 @@ const ListItem = ({ task, getData }) => {
         <button className="edit" onClick={() => setShowModal(true)}>
           EDIT
         </button>
-        <button className="delete">DELETE</button>
+        <button className="delete" onClick={deleteData}>
+          DELETE
+        </button>
       </div>
       {showModal && (
         <Modal

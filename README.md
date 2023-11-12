@@ -21,10 +21,13 @@ To run this project locally, follow these steps:
 ### Installation
 1. Clone the repository: `git clone https://github.com/yabad-codes/todo-fullstack.git`
 2. Change into the project directory: `cd todo-fullstack`
-3. Install server and client dependencies: `npm run build`
-4. Create a PostgreSQL database and update the configuration in `cd database && make` then access the database docker container using `docker exec -it postgres sh` and run `psql -U postgres` then create your tables using SQL queries in `data.sql` file.
-5. Run the server: `npm run server`
-6. Run the client: `npm run client`
+3. Install server dependencies: `cd server && npm i`
+4. Install client dependencies: `cd ../client && npm i`
+5. Create a PostgreSQL database and update the configuration in `cd database && make` then access the database docker container using `docker exec -it postgres sh` and run `psql -U postgres` then select todoapp database `\c todoapp` then create your tables using SQL queries in `data.sql` file.
+6. Modify .env values with the right ones before launching the server and client.
+7. Update packages for server using `npm update`.
+8. Run the server: `npm run server`
+9. Run the client: `npm run client`
 
 ## Authentication
 - Users can create an account by providing email and password.

@@ -58,3 +58,29 @@ To run this project locally, follow these steps:
 
 ## Contact
 For questions or issues, contact me in discord [yabad#8007].
+
+## Login and Register
+<img width="923" alt="register" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/859a0a91-cbf1-4c23-b39e-f18f309a82ce">
+<img width="954" alt="login" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/25945311-a3f2-4786-964f-7e2f5eae55fb">
+
+## Login and Register error handling
+<img width="899" alt="Screen Shot 2023-11-12 at 4 11 38 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/9f0a7d9e-88b7-46da-bcf5-0dcbdc38e414">
+<img width="935" alt="Screen Shot 2023-11-12 at 4 11 17 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/e5808000-ab37-48d4-821f-d904ba980cef">
+<img width="907" alt="register error handling 1" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/b1ed255c-b726-479c-a0d1-70610206f7dc">
+
+## Home page
+<img width="899" alt="Screen Shot 2023-11-12 at 4 11 54 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/20527a52-5cd3-48a1-bfbf-00a17d791459">
+
+## Adding todo item
+<img width="1181" alt="Screen Shot 2023-11-12 at 4 12 08 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/58fe5144-abb4-4844-ace1-b2232ab8fcb1">
+<img width="893" alt="Screen Shot 2023-11-12 at 4 12 30 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/488f5f55-3e45-4ec6-9163-c0b78e5dcdce">
+
+## Editing todo item
+<img width="944" alt="Screen Shot 2023-11-12 at 4 12 48 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/6bb53e27-81c0-4152-9c61-26298625800b">
+<img width="917" alt="Screen Shot 2023-11-12 at 4 17 32 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/09111e21-3a5f-44fa-b743-a4548089c3ae">
+
+## Deleting todo item by pressing delete
+<img width="894" alt="Screen Shot 2023-11-12 at 4 18 16 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/cd95f0ea-69d4-4676-8586-0ad8fa206242">
+
+## Logout
+<img width="881" alt="Screen Shot 2023-11-12 at 4 19 06 PM" src="https://github.com/yabad-codes/todo-fullstack/assets/103969464/04126078-c9c9-4a93-bf10-575a8574b72a">

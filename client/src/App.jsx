@@ -35,6 +35,10 @@ const App = () => {
       {!authToken && <Auth />}
       {authToken && (
         <>
+          <p className="user-email">
+            Welcome back{" "}
+            <span style={{ textDecorationLine: "underline" }}>{userEmail}</span>
+          </p>
           <ListHeader listName={"Get shit done!"} getData={getData} />
           {sortedTasks?.map((task) => (
             <ListItem key={task.id} task={task} getData={getData} />

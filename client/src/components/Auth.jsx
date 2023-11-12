@@ -32,8 +32,16 @@ const Auth = () => {
     if (data.detail) {
       setError(data.detail);
     } else {
-      setCookie("Email", data.email);
-      setCookie("AuthToken", data.token);
+      removeCookie("Email");
+      removeCookie("AuthToken");
+      setCookie("Email", data.email, {
+        sameSite: "None",
+        secure: true,
+      });
+      setCookie("AuthToken", data.token, {
+        sameSite: "None",
+        secure: true,
+      });
       window.location.reload();
     }
   };
@@ -41,8 +49,10 @@ const Auth = () => {
   return (
     <div className="auth-container">
       <div className="auth-container-box">
-        <form>
-          <h2>{isLogIn ? "Please log in" : "Please sign up"}</h2>
+        <form style={{ height: isLogIn ? 320 : 380 }}>
+          <h2 className="form-header">
+            {isLogIn ? "Please log in" : "Please sign up"}
+          </h2>
           <input
             type="email"
             placeholder="email"
@@ -65,7 +75,7 @@ const Auth = () => {
             className="create"
             onClick={(e) => handleSubmit(e, isLogIn ? "login" : "signup")}
           />
-          {error && <p>{error}</p>}
+          {error && <p className="error-type">Error : {error}</p>}
         </form>
         <div className="auth-options">
           <button
